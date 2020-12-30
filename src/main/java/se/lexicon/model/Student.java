@@ -11,6 +11,7 @@ public class Student extends Person {
     //Fields
     private final int studentId;
     private String[] course;
+    private Address address;
 
     //Constructors
     public Student() {
@@ -18,9 +19,10 @@ public class Student extends Person {
     }
 
 
-    public Student(String firstName, String lastName, int age, Gender gender, String[] course) {
+    public Student(String firstName, String lastName, int age, Gender gender, String[] course, Address address) {
         super(firstName, lastName, age, gender); // Calling matching constructor in Parent (Person)
         this.course = course;
+        this.address = address;
         this.studentId = StudentSequencer.nextId();
     }
 
@@ -53,5 +55,11 @@ public class Student extends Person {
         this.course = course;
     }
 
+    public Address getAddress() {
+        return address;
+    }
 
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 }

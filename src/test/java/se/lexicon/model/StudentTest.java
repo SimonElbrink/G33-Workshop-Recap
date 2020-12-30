@@ -12,7 +12,8 @@ public class StudentTest {
     @Before
     public void setUp() {
         String[] courses = new String[]{"Java", "C#"};
-        testObject = new Student("Mehrdad", "Javan", 32, Gender.MALE, courses);
+        Address address = new Address("Campus 1", "123 45", "Växjö");
+        testObject = new Student("Mehrdad", "Javan", 32, Gender.MALE, courses, address);
     }
 
     @After

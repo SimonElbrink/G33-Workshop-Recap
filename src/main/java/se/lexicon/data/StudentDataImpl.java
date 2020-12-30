@@ -75,6 +75,7 @@ public class StudentDataImpl implements StudentData {
         toUpdate.setAge(updatedStudent.getAge());
         toUpdate.setCourse(updatedStudent.getCourse());
         toUpdate.setGender(updatedStudent.getGender());
+        toUpdate.setAddress(updatedStudent.getAddress());
         boolean isDelete = delete(toUpdate.getStudentId());
         if (isDelete) {
             addStudent(toUpdate);
