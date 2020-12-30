@@ -14,13 +14,13 @@ Solutions? - Talk to Teacher, Pen and paper, Excel sheet, Java application, C# A
 
  Refactor *
 
-Documentation - Comments
-OOP
-Test
-Debugger
-Git - Remote & branches
-Interface & Abstract class, Class
-Enum
-Collection - SET
+Documentation - Comments   
+OOP   
+Test   
+Debugger   
+Git - Remote & branches  
+Interface & Abstract class, Class   
+Enum  
+Collection - SET  
 
 

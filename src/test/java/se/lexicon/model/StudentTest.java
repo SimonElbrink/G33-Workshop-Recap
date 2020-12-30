@@ -1,5 +1,6 @@
 package se.lexicon.model;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -11,7 +12,12 @@ public class StudentTest {
     @Before
     public void setUp() {
         String[] courses = new String[]{"Java", "C#"};
-        testObject = new Student("Mehrdad", "Javan", 32, "Male", courses);
+        testObject = new Student("Mehrdad", "Javan", 32, Gender.MALE, courses);
+    }
+
+    @After
+    public void tearDown(){
+        StudentSequencer.reset();
     }
 
     @Test
