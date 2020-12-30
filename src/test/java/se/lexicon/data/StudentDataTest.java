@@ -1,9 +1,11 @@
 package se.lexicon.data;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import se.lexicon.model.Student;
+import se.lexicon.model.StudentSequencer;
 
 public class StudentDataTest {
 
@@ -17,11 +19,16 @@ public class StudentDataTest {
         student = new Student("Mehrdad", "Javan", 32, "Male", courses);
     }
 
+    @After
+    public void tearDown(){
+        StudentSequencer.reset();
+    }
+
     @Test
-    public void test_addStudent_length() {
+    public void test_addStudent_length_successfullyAdded() {
         Student addStudentResult = studentDataTest.addStudent(student);
         System.out.println(addStudentResult.showInformation());
-        int expectedLength = 0;
+        int expectedLength = 1;
         int actualLength = studentDataTest.size();
         Assert.assertEquals(expectedLength,actualLength);
     }

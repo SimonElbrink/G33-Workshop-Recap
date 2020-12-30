@@ -11,4 +11,8 @@ public class StudentSequencer {
         return sequencer;
     }
 
+    public static void reset(){
+        sequencer = 0;
+    }
+
 }
