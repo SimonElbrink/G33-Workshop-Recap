@@ -5,12 +5,12 @@ public abstract class Person {
     private String firstName;
     private String lastName;
     private int age;
-    private String gender;
+    private Gender gender;
 
     public Person() {
     }
 
-    public Person(String firstName, String lastName, int age, String gender) {
+    public Person(String firstName, String lastName, int age, Gender gender) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -44,11 +44,11 @@ public abstract class Person {
         this.age = age;
     }
 
-    public String getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 }

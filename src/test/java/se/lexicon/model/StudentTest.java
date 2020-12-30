@@ -12,7 +12,7 @@ public class StudentTest {
     @Before
     public void setUp() {
         String[] courses = new String[]{"Java", "C#"};
-        testObject = new Student("Mehrdad", "Javan", 32, "Male", courses);
+        testObject = new Student("Mehrdad", "Javan", 32, Gender.MALE, courses);
     }
 
     @After

@@ -18,7 +18,7 @@ public class Student extends Person {
     }
 
 
-    public Student(String firstName, String lastName, int age, String gender, String[] course) {
+    public Student(String firstName, String lastName, int age, Gender gender, String[] course) {
         super(firstName, lastName, age, gender); // Calling matching constructor in Parent (Person)
         this.course = course;
         this.studentId = StudentSequencer.nextId();
