@@ -36,27 +36,38 @@ public class StudentTest {
 
 
 
-    /*
+
 
     @Test
     public void test_equal(){
-        AppUser isEqual =  new AppUser(1, "Mehrdad", "Javan", "mehrdad.javan@lexicon.se");
+
+        Student isEqual = new Student(1, "", "", 0, null, null, new Address("Campus 1", "123 45", "Växjö"));
+
         assertTrue(testObject.equals(isEqual));
     }
 
     @Test
     public void test_hashCode(){
-        AppUser  expected_obj =  new AppUser(1, "Mehrdad", "Javan", "mehrdad.javan@lexicon.se");
-        assertEquals(expected_obj.hashCode(),testObject.hashCode());
+
+        Student isEqual = new Student(1, "", "", 0, null, null, new Address("Campus 1", "123 45", "Växjö"));
+
+        assertEquals(testObject.hashCode(), isEqual.hashCode());
+
     }
 
     @Test
     public void test_toString(){
+
+        //Arrange
         String toString = testObject.toString();
+
+        System.out.println(toString);
+
         assertTrue(toString.contains("1"));
         assertTrue(toString.contains("Mehrdad"));
-        assertTrue(toString.contains("Javan"));
-        assertTrue(toString.contains("mehrdad.javan@lexicon.se"));
+        assertTrue(toString.contains("Campus 1"));
+        assertTrue(toString.contains("Java"));
+
     }
 
     */

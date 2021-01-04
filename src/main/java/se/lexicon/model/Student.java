@@ -3,6 +3,7 @@
 package se.lexicon.model;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 // Student = Child, Subclass
 // Person = Parent, Super, Superclass
@@ -18,6 +19,12 @@ public class Student extends Person {
         this.studentId = StudentSequencer.nextId();
     }
 
+    public Student(int id, String firstName, String lastName, int age, Gender gender, String[] course, Address address) {
+        super(firstName, lastName, age, gender); // Calling matching constructor in Parent (Person)
+        this.studentId = id;
+        this.course = course;
+        this.address = address;
+    }
 
     public Student(String firstName, String lastName, int age, Gender gender, String[] course, Address address) {
         super(firstName, lastName, age, gender); // Calling matching constructor in Parent (Person)
@@ -61,5 +68,28 @@ public class Student extends Person {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return getStudentId() == student.getStudentId() && Objects.equals(getAddress(), student.getAddress());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getStudentId(), getAddress());
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName=" + super.getFirstName() +
+                ", studentId=" + studentId +
+                ", course=" + Arrays.toString(course) +
+                ", address=" + address +
+                '}';
     }
 }
