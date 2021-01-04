@@ -16,7 +16,7 @@ public class StudentDataTest {
 
     @Before
     public void setup() {
-        studentDataTest = new StudentDataImpl();
+        studentDataTest = new StudentDataImplArrays();
         String[] courses = new String[]{"Java", "C#"};
         Address address = new Address("Campus 1", "123 45", "Växjö");
         student = new Student("Mehrdad", "Javan", 32, Gender.MALE, courses, address);

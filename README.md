@@ -12,16 +12,16 @@ Solutions? - Talk to Teacher, Pen and paper, Excel sheet, Java application, C# A
 
  CRUD - Create, Read, Update, Delete
 
+ OOP   
  Refactor *
 
 - [X] Address
-- Documentation - Comments   
-- OOP   
-- [ ] Test   
+- [ ] Documentation - Comments   
+
+- [ ] Test (Address)   
 - [X] Debugger   
 - [X] Git - Remote & branches  
 - [X] Interface & Abstract class, Class   
-- [X] Enum  
-- Collection - SET  
-
-
+- [X] Enum (Gender) 
+- [ ] Collection - SET 
+- [ ] Equals & Hashcode  

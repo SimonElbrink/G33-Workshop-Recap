@@ -2,6 +2,7 @@ package se.lexicon.data;
 
 import se.lexicon.model.Student;
 
+//Interface = Contract = Set of rules to follow.
 public interface StudentData {
 
     // define student functionalities

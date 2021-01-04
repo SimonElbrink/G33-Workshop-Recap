@@ -4,12 +4,12 @@ import se.lexicon.model.Student;
 
 import java.util.Arrays;
 
-public class StudentDataImpl implements StudentData {
+public class StudentDataImplArrays implements StudentData {
 
 
     private Student[] students;
 
-    public StudentDataImpl() {
+    public StudentDataImplArrays() {
         students = new Student[0];
     }
 
