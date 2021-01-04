@@ -34,32 +34,48 @@ public class StudentTest {
         assertEquals("Mehrdad", testObject.getFirstName());
     }
 
-
-
-    /*
-
     @Test
-    public void test_equal(){
-        AppUser isEqual =  new AppUser(1, "Mehrdad", "Javan", "mehrdad.javan@lexicon.se");
-        assertTrue(testObject.equals(isEqual));
+    public void Test_compareTo_notGreater() {
+
+        //Arrange
+        Student toCompare = new Student(10, "", "", 0, null, null, new Address("Campus 1", "123 45", "Växjö"));
+        int expected = -1;
+        int actual;
+
+        //Act
+        actual = testObject.compareTo(toCompare);
+
+        //Assert
+        assertEquals(expected, actual);
     }
 
     @Test
-    public void test_hashCode(){
-        AppUser  expected_obj =  new AppUser(1, "Mehrdad", "Javan", "mehrdad.javan@lexicon.se");
-        assertEquals(expected_obj.hashCode(),testObject.hashCode());
+    public void Test_compareTo_When_Same() {
+
+        //Arrange
+        Student toCompare = new Student(1, "", "", 0, null, null, new Address("Campus 1", "123 45", "Växjö"));
+        int expected = 0;
+        int actual;
+
+        //Act
+        actual = testObject.compareTo(toCompare);
+
+        //Assert
+        assertEquals(expected, actual);
     }
 
     @Test
-    public void test_toString(){
-        String toString = testObject.toString();
-        assertTrue(toString.contains("1"));
-        assertTrue(toString.contains("Mehrdad"));
-        assertTrue(toString.contains("Javan"));
-        assertTrue(toString.contains("mehrdad.javan@lexicon.se"));
+    public void Test_compareTo_When_Greater() {
+
+        //Arrange
+        Student toCompare = new Student(0, "", "", 0, null, null, new Address("Campus 1", "123 45", "Växjö"));
+        int expected = 1;
+        int actual;
+
+        //Act
+        actual = testObject.compareTo(toCompare);
+
+        //Assert
+        assertEquals(expected, actual);
     }
-
-    */
-
-
 }

@@ -3,13 +3,12 @@ package se.lexicon.data;
 import se.lexicon.model.Student;
 
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class StudentDataImplCollection implements StudentData {
 
-    Set<Student> studentStorage;
+    private Set<Student> studentStorage;
 
     public StudentDataImplCollection() {
         studentStorage = new TreeSet<>();
@@ -31,7 +30,17 @@ public class StudentDataImplCollection implements StudentData {
 
     @Override
     public Student findById(int studentId) {
-        return null;
+
+        Student foundStudent = null;
+
+        for (Student s : studentStorage){
+            if (s.getStudentId() == studentId){
+                foundStudent = s;
+                break;
+            }
+        }
+
+        return foundStudent;
     }
 
     @Override
@@ -51,11 +60,12 @@ public class StudentDataImplCollection implements StudentData {
 
     @Override
     public int size() {
-        return 0;
+        return studentStorage.size();
     }
 
     @Override
     public void clear() {
+        studentStorage = new TreeSet<>();
 
     }
 }
