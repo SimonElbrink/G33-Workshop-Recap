@@ -1,5 +1,7 @@
 package se.lexicon.model;
 
+import java.util.Objects;
+
 public class Address {
 
     private String street;
@@ -34,5 +36,27 @@ public class Address {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Address address = (Address) o;
+        return Objects.equals(getStreet(), address.getStreet()) && Objects.equals(getZipcode(), address.getZipcode()) && Objects.equals(getCity(), address.getCity());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getStreet(), getZipcode(), getCity());
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "street='" + street + '\'' +
+                ", zipcode='" + zipcode + '\'' +
+                ", city='" + city + '\'' +
+                '}';
     }
 }
